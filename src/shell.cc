@@ -342,7 +342,7 @@ void detectProcesses(string cmd, vector<int> *pids)
     vector<string> envs;
     args.push_back(cmd);
     string out;
-    invokeShellCaptureOutput("/bin/pidof", args, envs, &out, true);
+    invokeShellCaptureOutput("pidof", args, envs, &out, true);
 
     char buf[out.size()+1];
     strcpy(buf, out.c_str());
